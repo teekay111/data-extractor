@@ -1,0 +1,178 @@
+/* Main Background and Text */
+.stApp {
+  background-color: #f5f5f5;
+  color: #1d2c30;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Top Header Bar */
+header[data-testid="stHeader"] {
+  background-color: #204855 !important;
+  z-index: 1000;
+}
+/* Top Header Buttons (Deploy, etc.) */
+header[data-testid="stHeader"] button {
+  color: white !important;
+}
+header[data-testid="stHeader"] svg {
+  fill: white !important;
+  color: white !important;
+}
+
+/* Fixed Logo in Top Left */
+.fixed-logo {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  height: 2.5rem;
+  z-index: 999999; /* Ensure it's above the header */
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Hide sidebar globally */
+[data-testid="stSidebar"], section[data-testid="stSidebar"] {
+    display: none !important;
+}
+
+/* Homepage-Specific Large Card Buttons */
+.stApp:has(#homepage-marker) div.stButton > button {
+    height: 200px !important;
+    border-radius: 16px !important;
+    background: linear-gradient(135deg, #204855 0%, #325a67 100%) !important;
+    border: none !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+}
+
+/* Target ALL inner text elements to ensure font-size is applied on Homepage */
+.stApp:has(#homepage-marker) div.stButton > button p, 
+.stApp:has(#homepage-marker) div.stButton > button div, 
+.stApp:has(#homepage-marker) div.stButton > button span {
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    color: white !important;
+    line-height: 1.2 !important;
+}
+
+.stApp:has(#homepage-marker) div.stButton > button:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2) !important;
+    background: linear-gradient(135deg, #325a67 0%, #204855 100%) !important;
+}
+
+/* Headers */
+h1,
+h2,
+h3 {
+  color: #204855; /* ASI Dark Teal */
+  font-weight: 600;
+}
+
+/* Sidebar Button Specific Styling - No longer needed but kept for reference if moved back */
+/* Top Bar Button Specific Styling */
+#fixed-back-container {
+    position: fixed;
+    top: 0.5rem;
+    left: 4.5rem; /* Logo is at 1rem, this puts the button right next to it */
+    z-index: 9999999;
+}
+
+#fixed-back-container .stButton > button {
+    background-color: white !important;
+    color: #204855 !important;
+    border: 1px solid #204855 !important;
+    height: 2.5rem !important;
+    font-size: 0.85rem !important;
+    padding: 0 1rem !important;
+    font-weight: 500 !important;
+    border-radius: 4px !important;
+}
+
+#fixed-back-container .stButton > button:hover {
+    background-color: #f0f4f5 !important;
+    border-color: #325a67 !important;
+}
+
+/* Buttons */
+.stButton > button {
+  background-color: #204855;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.stButton > button:hover {
+  background-color: #325a67; /* ASI Accent */
+  color: white;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Inputs */
+.stTextInput > div > div > input {
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  color: #1d2c30;
+}
+
+/* Data Editor */
+[data-testid="stDataFrame"] {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* Info Box */
+.stAlert {
+  background-color: #e8f1f2;
+  color: #1d2c30;
+  border: 1px solid #204855;
+}
+
+/* Custom Header Bar */
+.header-bar {
+  background-color: #204855; /* ASI Dark Teal */
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: left; /* Changed from center to left for flex layout */
+  background-image: linear-gradient(135deg, #204855 0%, #325a67 100%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-bar img {
+  height: 80px;
+  width: auto;
+  border-radius: 4px;
+}
+.header-content {
+  flex: 1;
+}
+.header-bar h1 {
+  color: white !important;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+.header-bar p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  color: white;
+  margin: 0;
+}
+
+/* Rectangular Chat Input (CSV Extractor specific) */
+[data-testid="stChatInput"] > div {
+  border-radius: 4px !important;
+}
+[data-testid="stChatInput"] textarea {
+  border-radius: 4px !important;
+}

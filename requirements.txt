@@ -1,0 +1,9 @@
+streamlit
+pandas
+google-generativeai
+tabulate
+pywebview
+pyinstaller
+streamlit-pdf-viewer
+pdfplumber
+Pillow
